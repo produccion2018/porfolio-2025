@@ -12,27 +12,39 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-  
-  <!-- Navegación -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">MiPortafolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" class="logo"> MiPortafolio
+      </a>
+      <button class="navbar-toggler" id="menu-toggle" type="button">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimoniales">Testimoniales</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre-mi">Sobre Mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#proyectos">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#servicios">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimoniales">Testimoniales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+  
   
 
 <!-- Slider -->
@@ -88,169 +100,117 @@
   </section>
 
   <!-- Sección de servicios -->
-  <section class="services-section">
-    <div class="container">
-      <h2 class="section-title">Mis Servicios</h2>
-      <div class="services-container">
-
-        <!-- Tarjeta de servicio 1 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="bi bi-code-slash"></i> <!-- Ícono de código -->
-          </div>
-          <h3 class="service-title">Desarrollo Web</h3>
-          <p class="service-description">
-            Ofrezco desarrollo web utilizando las últimas tecnologías como HTML, CSS, JavaScript, y frameworks como React.
-          </p>
-        </div>
-
-        <!-- Tarjeta de servicio 2 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="bi bi-paint-bucket"></i> <!-- Ícono de diseño -->
-          </div>
-          <h3 class="service-title">Diseño Gráfico</h3>
-          <p class="service-description">
-            Diseño interfaces atractivas y funcionales que se adaptan a las necesidades de los usuarios.
-          </p>
-        </div>
-
-        <!-- Tarjeta de servicio 3 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="bi bi-camera"></i> <!-- Ícono de fotografía -->
-          </div>
-          <h3 class="service-title">Fotografía</h3>
-          <p class="service-description">
-            Ofrezco fotografía profesional para proyectos digitales, eventos y más.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-<!-- Sección de Proyectos -->
-<section id="proyectos" class="proyectos-section">
+<section class="services-section">
   <div class="container">
-    <h2 class="titulo text-center text-white">Mis Proyectos</h2>
-    <div class="proyectos-container">
-      <!-- Tarjetas de Proyecto -->
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 1">
-        <a href="https://github.com/tuusuario/proyecto1" target="_blank">Ver Proyecto</a>
+    <h2 class="section-title">Mis Servicios</h2>
+    <div class="services-container">
+      <!-- Tarjeta de servicio 1 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="bi bi-code-slash"></i>
+        </div>
+        <h3 class="service-title">Desarrollo Web</h3>
+        <p class="service-description">
+          Ofrezco desarrollo web utilizando las últimas tecnologías como HTML, CSS, JavaScript, y frameworks como React.
+        </p>
       </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 2">
-        <a href="https://github.com/tuusuario/proyecto2" target="_blank">Ver Proyecto</a>
+      <!-- Tarjeta de servicio 2 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="bi bi-paint-bucket"></i>
+        </div>
+        <h3 class="service-title">Diseño Gráfico</h3>
+        <p class="service-description">
+          Diseño interfaces atractivas y funcionales que se adaptan a las necesidades de los usuarios.
+        </p>
       </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 3">
-        <a href="https://github.com/tuusuario/proyecto3" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 4">
-        <a href="https://github.com/tuusuario/proyecto4" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 5">
-        <a href="https://github.com/tuusuario/proyecto5" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 6">
-        <a href="https://github.com/tuusuario/proyecto6" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 7">
-        <a href="https://github.com/tuusuario/proyecto7" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 8">
-        <a href="https://github.com/tuusuario/proyecto8" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 9">
-        <a href="https://github.com/tuusuario/proyecto9" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 10">
-        <a href="https://github.com/tuusuario/proyecto10" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 11">
-        <a href="https://github.com/tuusuario/proyecto11" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 12">
-        <a href="https://github.com/tuusuario/proyecto12" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 13">
-        <a href="https://github.com/tuusuario/proyecto13" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 14">
-        <a href="https://github.com/tuusuario/proyecto14" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 15">
-        <a href="https://github.com/tuusuario/proyecto15" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 16">
-        <a href="https://github.com/tuusuario/proyecto16" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 17">
-        <a href="https://github.com/tuusuario/proyecto17" target="_blank">Ver Proyecto</a>
-      </div>
-      <div class="proyecto-card">
-        <img src="https://via.placeholder.com/150" alt="Proyecto 18">
-        <a href="https://github.com/tuusuario/proyecto18" target="_blank">Ver Proyecto</a>
+      <!-- Tarjeta de servicio 3 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="bi bi-camera"></i>
+        </div>
+        <h3 class="service-title">Fotografía</h3>
+        <p class="service-description">
+          Ofrezco fotografía profesional para proyectos digitales, eventos y más.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-  <h2>Contacto</h2>
-    <p>Completa el formulario o sígueme en mis redes sociales:</p>
-    
-    <!-- Formulario de contacto -->
-    <form action="#" method="post" class="contact-form">
-      <div class="form-group">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+<!-- Sección Mis Proyectos -->
+<section class="projects-section">
+  <div class="container">
+    <h2 class="section-title">Mis Proyectos</h2>
+    <div class="projects-container" id="projects-container">
+      <!-- Las tarjetas se cargarán dinámicamente con JavaScript -->
+    </div>
+  </div>
+</section>
+
+<!-- testimoniales -->
+<section class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">Testimonios</h2>
+    <div class="testimonials-container">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Mauro es un excelente desarrollador, su trabajo en nuestro proyecto fue fundamental."</p>
+        <p class="testimonial-author">Juan Pérez - CEO</p>
       </div>
-      <div class="form-group">
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="Tu correo" required>
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Gracias a su creatividad, el diseño de nuestra web superó todas nuestras expectativas."</p>
+        <p class="testimonial-author">Ana Gómez - Directora Creativa</p>
       </div>
-      <div class="form-group">
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Gran profesional, siempre entregando soluciones rápidas y eficaces."</p>
+        <p class="testimonial-author">Carlos Ruiz - Gerente de IT</p>
       </div>
-      <button type="submit">Enviar</button>
-    </form>
+      <!-- Testimonial 4 -->
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Mauro logra transformar ideas complejas en productos fáciles de usar. Muy recomendable."</p>
+        <p class="testimonial-author">Laura Martínez - Fundadora</p>
+      </div>
+      <!-- Testimonial 5 -->
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Trabajo excepcional, siempre con una actitud positiva y con mucho enfoque en el detalle."</p>
+        <p class="testimonial-author">Miguel Sánchez - CTO</p>
+      </div>
+      <!-- Testimonial 6 -->
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Ha sido un placer trabajar con Mauro, una persona comprometida con el éxito del proyecto."</p>
+        <p class="testimonial-author">Elena Díaz - Marketing Manager</p>
+      </div>
+    </div>
+  </div>
+
   
-    <!-- Redes sociales -->
-    <div class="social-icons">
-      <a href="https://github.com/tuusuario" target="_blank" aria-label="GitHub">
-        <i class="bi bi-github"></i>
-      </a>
-      <a href="https://linkedin.com/in/tuusuario" target="_blank" aria-label="LinkedIn">
-        <i class="bi bi-linkedin"></i>
-      </a>
-      <a href="https://instagram.com/tuusuario" target="_blank" aria-label="Instagram">
-        <i class="bi bi-instagram"></i>
+  <!-- Contacto -->
+  <section class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Contacto</h2>
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required placeholder="Ingresa tu correo">
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Enviar</button>
+      </form>
+      <a href="https://wa.me/123456789" target="_blank" class="whatsapp-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/WhatsApp_icon.png" alt="WhatsApp">
       </a>
     </div>
   </section>
-  
-  <!-- Botón Flotante de WhatsApp -->
-  <a href="https://wa.me/1234567890" class="btn-whatsapp-small" target="_blank" aria-label="WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-  </a>
-  
   
   
   
@@ -270,9 +230,12 @@
 
   <!-- Bootstrap Icons (Íconos) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/app.js"></script>
+  <script src="./js/testimoniales.js"></script>
 </body>
 </html>

@@ -12,72 +12,75 @@ h1, h2, p {
   padding: 0.5rem 0;
 }
 
-/* Navegación */
+/* Navbar general */
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #343a40; /* Fondo oscuro */
-  color: white;
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 6px #00ff004d;
 }
 
-/* Ocultar navegación al desplazarse hacia abajo */
-.navbar.hidden {
-  transform: translateY(-100%);
-  opacity: 0;
+/* Logo */
+.logo {
+  max-height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
 }
 
-/* Mostrar navegación al desplazarse hacia arriba */
-.navbar.visible {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-item {
-  text-align: center;
-}
-
+/* Estilo de enlaces */
 .nav-link {
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: white;
-  padding: 0.4rem 0.8rem;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  border-radius: 0.25rem;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: yellow;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffd700; /* Amarillo en hover */
+  background-color: #ffffff1a;
+  border-radius: 5px;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  .navbar-brand {
-    font-size: 1.3rem;
+/* Estilo del botón hamburguesa */
+.navbar-toggler {
+  border: none;
+  background-color: #06fc4b;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+  width: 25px;
+  height: 3px;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  background-color: #fff;
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
+}
+
+/* Responsive comportamiento */
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column; /* Vertical en móviles y tabletas */
+    align-items: center;
   }
+
   .nav-link {
-    font-size: 1rem;
-    padding: 0.3rem 0.6rem;
+    padding: 1rem;
   }
 }
 
@@ -91,7 +94,7 @@ h1, h2, p {
   background: linear-gradient(135deg, #343a40, #495057);
   padding: 1rem;
   border-radius: 0 12px 12px 0;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 3px 10px #00000066;
   gap: 0.8rem; /* Espacio entre los ítems */
   z-index: 999;
   opacity: 0.95;
@@ -105,7 +108,7 @@ h1, h2, p {
 /* Efecto al pasar el cursor por todo el slider */
 #slider:hover {
   opacity: 1;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 15px #00000080;
 }
 
 /* Estilo de los ítems del slider */
@@ -221,8 +224,8 @@ h1, h2, p {
 /* Header */
 header {
   text-align: center;
-  color: white;
-  background-color: black;
+  color: #ffffff;
+  background-color: #000000;
   padding: 2rem 0;
 }
 
@@ -249,7 +252,7 @@ header {
 
 .header-symbols i.js-symbol {
   font-size: 4rem;
-  color: yellow;
+  color: #ffff00;
   animation: pulse 3s infinite;
 }
 
@@ -290,7 +293,7 @@ header {
 .sobre-mi {
   background: linear-gradient(135deg, #f7f2f2 0%, #e0e0e0 100%);
   padding: 50px 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px #0000001a;
   margin: 20px;
   position: relative;
   border-radius: 10px;
@@ -335,7 +338,7 @@ header {
   border-radius: 15px;
   box-shadow: 0 4px 12px #00000033;
   transition: opacity 0.5s ease;
-  border: 5px solid white;
+  border: 5px solid #ffffff;
   opacity: 0.8;
   z-index: 1;
   background-color: #ffffff1a;
@@ -404,7 +407,7 @@ header {
 footer {
   margin-top: 3rem;
   background-color: #212529;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
@@ -427,162 +430,371 @@ footer a:hover {
   }
 }
 
+
+
+/* Servicio */
 .services-section {
-  background-color: #f4f4f4; /* Fondo gris */
+background-color: #f7f2f2ce;
   padding: 60px 0;
 }
 
-.section-title {
+/* Contenedor de la sección */
+.services-section {
+  background-color: #f7f2f2ce;
+  padding: 50px 0;
   text-align: center;
-  font-size: 2.5em;
-  font-weight: 700;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
   color: #333;
-  animation: zoomIn 3s infinite; /* Animación infinita */
 }
 
 .services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Disposición de las tarjetas */
-  justify-items: center; /* Centrar las tarjetas horizontalmente */
-  gap: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Espaciado más grande entre tarjetas */
+  flex-wrap: wrap;
 }
 
+/* Tarjetas */
 .service-card {
-  background-color: #e0e0e0; /* Fondo gris claro */
-  padding: 25px;
+  width: 240px; /* Ancho más grande */
+  height: 300px; /* Altura más grande */
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra un poco más pronunciada */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Más espacio interno */
   text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px #0000001a;
-  width: 300px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 2px solid #3f51b5; /* Borde azul */
-  animation: fadeInUp 1.5s ease-in-out;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: pulse 2s infinite;
+  opacity: 0.95; /* Un poco más de opacidad */
+}
+
+/* Animación */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.07); /* Aumentar ligeramente el efecto de escala */
+    opacity: 1;
+  }
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  background-color: #d4d4d4; /* Fondo ligeramente más oscuro al pasar el mouse */
-  border: 2px solid #3f51b5; /* Mantener borde azul en hover */
+  transform: scale(1.12); /* Mayor efecto en hover */
+  opacity: 1;
 }
 
 .service-icon {
-  font-size: 3.5em;
-  color: #3f51b5;
-  margin-bottom: 20px;
+  font-size: 2.5rem; /* Ícono más grande */
+  color: #007bff;
+  margin-bottom: 15px;
 }
 
 .service-title {
-  font-size: 1.5em;
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-size: 1.4rem; /* Título más grande */
   color: #333;
+  margin: 15px 0;
 }
 
 .service-description {
-  font-size: 1.1em;
-  color: #777;
-  line-height: 1.6;
+  font-size: 1rem; /* Descripción más grande */
+  color: #666;
+  line-height: 1.5; /* Mejor legibilidad */
 }
 
-/* Animaciones */
-@keyframes zoomIn {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
+/* proyecto */
 
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Fondo de la sección */
-.container.projects {
-  background-color: rgba(20, 20, 20, 0.95); /* Fondo oscuro suave */
-  padding: 40px 20px;
-  border-radius: 10px;
-}
-
-/* Contenedor de proyectos */
-.proyectos-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
-  gap: 20px;
-  padding: 20px 0;
-}
-
-/* Tarjetas de proyectos */
-.proyecto-card {
-  background: linear-gradient(145deg, #1a1a2e, #16213e); /* Fondo oscuro elegante */
-  color: white;
-  padding: 20px;
-  border-radius: 15px;
-  border: 1px solid #ffffff33;
+/* Estilo general */
+.projects-section {
+  background-color: #f5f5f5;
+  padding: 50px 0;
   text-align: center;
-  box-shadow: 0 4px 6px #00000099;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Contenedor de las tarjetas */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila en pantallas grandes */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tarjetas */
+.project-card {
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0000001a;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: glow 2s infinite;
   opacity: 0.9;
 }
 
-/* Efecto hover */
-.proyecto-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px #8a2be2cc;
+/* Borde luminoso */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #007bffcc;
+  border-color: #007bffcc;
+  opacity: 1;
 }
 
-/* Imagen de la tarjeta */
-.proyecto-card img {
+/* Animación infinita */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px #007bff80;
+    border-color: #007bff80;
+  }
+  50% {
+    box-shadow: 0 0 20px #007bffcc;
+    border-color: #007bffcc;
+  }
+}
+
+/* Imagen dentro de la tarjeta */
+.project-card img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
 }
 
 /* Enlace dentro de la tarjeta */
-.proyecto-card a {
-  display: block;
-  margin-top: 15px;
-  color: #ffcc00;
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #007bff;
   text-decoration: none;
   font-weight: bold;
 }
 
-.proyecto-card a:hover {
+.project-card a:hover {
   text-decoration: underline;
 }
 
-/* Títulos y textos */
-.proyecto-card .card-title {
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.proyecto-card .card-text {
-  color: #d1d1d1;
-  font-size: 14px;
-}
-
-/* Diseño responsivo */
-@media (max-width: 1024px) {
-  .proyectos-container {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
-  }
-}
-
+/* Diseño para móviles */
 @media (max-width: 768px) {
-  .proyectos-container {
-    grid-template-columns: repeat(2, 1fr); /* También dos columnas en tablets pequeñas */
+  .projects-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila en móviles */
+    gap: 10px; /* Reduce el espacio entre las tarjetas */
+  }
+
+  .project-card {
+    padding: 15px; /* Reducir padding en móviles */
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+  }
+
+  .project-card img {
+    width: 80%; /* Hacer la imagen un poco más pequeña */
+  }
+
+  .project-card a {
+    font-size: 1rem; /* Reducir el tamaño de los enlaces */
+  }
+}
+/* testimoniales */
+
+/* Testimoniales */
+.testimonials-section {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Contenedor de los testimoniales */
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila en desktop */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tarjetas de los testimoniales */
+.testimonial-card {
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: glow 2s infinite, fadeIn 6s infinite;
+  opacity: 0.9;
+}
+
+/* Animación infinita para borde luminoso */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px #007bff80;
+    border-color: #007bff80;
+  }
+  50% {
+    box-shadow: 0 0 20px #007bffcc;
+    border-color: #007bffcc;
   }
 }
 
-@media (max-width: 576px) {
-  .proyectos-container {
-    grid-template-columns: 1fr; /* Una columna en celulares */
+/* Animación para el cambio de texto */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
+
+/* Texto de los testimoniales */
+.testimonial-text {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Diseño para móviles */
+@media (max-width: 768px) {
+  .testimonials-container {
+    grid-template-columns: repeat(1, 1fr); /* 1 tarjeta por fila en móviles */
+  }
+
+  .testimonial-card {
+    padding: 15px; /* Reducir padding en móviles */
+  }
+
+  .testimonial-text {
+    font-size: 1rem; /* Reducir tamaño de texto en móviles */
+  }
+}
+
+/* Contacto */
+/* Estilos generales */
+.contact-section {
+  background-color: #000;
+  padding: 50px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #333;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #444;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el icono de WhatsApp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.whatsapp-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 20px;
+  }
+  .submit-btn {
+    font-size: 1rem;
+  }
+}
+
