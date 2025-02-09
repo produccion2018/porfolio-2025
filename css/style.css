@@ -5,6 +5,9 @@ body {
   padding: 0;
   line-height: 1.6;
   scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding-top: 60px; 
 }
 
 h1, h2, p {
@@ -12,77 +15,135 @@ h1, h2, p {
   padding: 0.5rem 0;
 }
 
-/* Navbar general */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Barra de navegación */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 4px 6px #00ff004d;
-}
-
-/* Logo */
-.logo {
-  max-height: 50px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-
-/* Estilo de enlaces */
-.nav-link {
-  color: #ffffff;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #ffd700; /* Amarillo en hover */
-  background-color: #ffffff1a;
-  border-radius: 5px;
-}
-
-/* Estilo del botón hamburguesa */
-.navbar-toggler {
-  border: none;
-  background-color: #06fc4b;
-  border-radius: 5px;
-  padding: 0.5rem;
-}
-
-.navbar-toggler-icon {
-  background-color: #fff;
-  width: 25px;
-  height: 3px;
-  position: relative;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  background-color: #fff;
-  width: 25px;
-  height: 3px;
-  position: absolute;
+  background-color: #000;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.navbar-toggler-icon::before {
-  top: -8px;
+/* Lista de navegación */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
 
-.navbar-toggler-icon::after {
-  top: 8px;
+/* Enlaces de navegación */
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Responsive comportamiento */
-@media (max-width: 992px) {
-  .navbar-nav {
-    flex-direction: column; /* Vertical en móviles y tabletas */
-    align-items: center;
+/* Hover y activo */
+.navbar a:hover,
+.navbar .active {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* Estilos del botón hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+/* Animación del menú hamburguesa */
+.menu-toggle.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 10px 20px;
   }
 
-  .nav-link {
-    padding: 1rem;
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar ul.show {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .navbar ul li {
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: flex;
   }
 }
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Espaciado para las secciones */
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+
 
 /* Slider Vertical Mejorado */
 #slider {
@@ -289,9 +350,11 @@ header {
   }
 }
 
+
+
 /* Sobre mí */
 .sobre-mi {
-  background: linear-gradient(135deg, #f7f2f2 0%, #e0e0e0 100%);
+  background-color: #e6b3e680; /* Violeta pastel suave */
   padding: 50px 20px;
   box-shadow: 0 4px 15px #0000001a;
   margin: 20px;
@@ -434,7 +497,7 @@ footer a:hover {
 
 /* Servicio */
 .services-section {
-background-color: #f7f2f2ce;
+background-color: #000000;
   padding: 60px 0;
 }
 

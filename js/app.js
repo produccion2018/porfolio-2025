@@ -1,46 +1,53 @@
-// Selecciona el botón y el menú
-const toggleButton = document.getElementById("menu-toggle");
-const navbarNav = document.getElementById("navbarNav");
+function toggleMenu() {
+  const menu = document.querySelector(".navbar ul");
+  const toggle = document.querySelector(".menu-toggle");
+  const body = document.body;  
 
-// Alternar clase activa para mostrar/ocultar el menú
-toggleButton.addEventListener("click", () => {
-  navbarNav.classList.toggle("show");
+  menu.classList.toggle("show");
+  toggle.classList.toggle("active");
+
+  // Cambiar el modo oscuro
+  body.classList.toggle("dark-mode");
+}
+
+// Cerrar el menú cuando se hace clic en un enlace
+document.querySelectorAll(".nav-link").forEach(item => {
+  item.addEventListener("click", () => {
+    document.querySelector(".navbar ul").classList.remove("show");
+    document.querySelector(".menu-toggle").classList.remove("active");
+  });
 });
 
+  
 
 
-// Datos de los proyectos
+// Datos de los proyectos con imágenes específicas
 const projects = [
-  { id: 1, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto1" },
-  { id: 2, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto2" },
-  { id: 3, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto3" },
-  { id: 4, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto4" },
-  { id: 5, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto5" },
-  { id: 6, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto6" },
-  { id: 7, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto7" },
-  { id: 8, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto8" },
-  { id: 9, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto9" },
-  { id: 10, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto10" },
-  { id: 11, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto11" },
-  { id: 12, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto12" },
-  { id: 13, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto13" },
-  { id: 14, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto14" },
-  { id: 15, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto15" },
-  { id: 16, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto16" },
-  { id: 17, img: "https://via.placeholder.com/150", link: "https://github.com/tuusuario/proyecto17" },
+  { id: 1, img: "proyecto1", link: "https://github.com/tuusuario/proyecto1" },
+  { id: 2, img: "img/proyecto2.jpg", link: "https://github.com/tuusuario/proyecto2" },
+  { id: 3, img: "img/proyecto3.jpg", link: "https://github.com/tuusuario/proyecto3" },
+  { id: 4, img: "img/proyecto4.jpg", link: "https://github.com/tuusuario/proyecto4" },
+  { id: 5, img: "img/proyecto5.jpg", link: "https://github.com/tuusuario/proyecto5" }
 ];
 
-// Selecciona el contenedor
+// Seleccionar el contenedor donde se mostrarán los proyectos
 const projectsContainer = document.getElementById("projects-container");
 
-// Genera las tarjetas dinámicamente
-projects.forEach((project) => {
-  const card = document.createElement("div");
-  card.className = "project-card";
-  card.innerHTML = `
-    <img src="${project.img}" alt="Proyecto ${project.id}">
-    <a href="${project.link}" target="_blank">Ver Proyecto</a>
-  `;
-  projectsContainer.appendChild(card);
+// Generar dinámicamente las tarjetas de proyectos
+projects.forEach(project => {
+  const projectCard = document.createElement("div");
+  projectCard.classList.add("project-card");
+
+  const projectLink = document.createElement("a");
+  projectLink.href = project.link;
+  projectLink.target = "_blank";
+
+  const projectImg = document.createElement("img");
+  projectImg.src = project.img;
+  projectImg.alt = `Proyecto ${project.id}`;
+
+  projectLink.appendChild(projectImg);
+  projectCard.appendChild(projectLink);
+  projectsContainer.appendChild(projectCard);
 });
 
