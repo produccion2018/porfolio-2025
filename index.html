@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio</title>
-  <link rel="shortcut icon" href="./img/img/favicon.ico" type="image/x-icon">
+ <!-- Incluye FontAwesome para los íconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="shortcut icon" href="./img/img/favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap"
     rel="stylesheet">
@@ -19,45 +21,38 @@
 
   <header>
     <nav class="navbar">
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <ul>
-        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-        <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-        <li><a href="#servicios" class="nav-link">Servicios</a></li>
-        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-        <li><a href="#testimoniales" class="nav-link">Testimoniales</a></li>
-        <li><a href="#contacto" class="nav-link">Contacto</a></li>
-      </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+            <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+            <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
     </nav>
-  </header>
-  
+</header>
 
-    <!-- Slider -->
-    <div id="slider">
-      <a href="#inicio" class="slider-item"><i class="fas fa-home"></i> Inicio</a>
-      <a href="#sobre-mi" class="slider-item"><i class="fas fa-user"></i> Sobre Mí</a>
-      <a href="#proyectos" class="slider-item"><i class="fas fa-briefcase"></i> Proyectos</a>
-      <a href="#servicios" class="slider-item"><i class="fas fa-cogs"></i> Servicios</a>
-      <a href="#testimoniales" class="slider-item"><i class="fas fa-comments"></i> Testimoniales</a>
-      <a href="#contacto" class="slider-item"><i class="fas fa-envelope"></i> Contacto</a>
-      <a href="https://github.com/tuusuario" target="_blank" class="slider-item"><i class="fab fa-github"></i>
-        GitHub</a>
-      <a href="https://www.linkedin.com/in/mauroalexanderpinto/" target="_blank" class="slider-item"><i class="fab fa-linkedin"></i>
-        LinkedIn</a>
-        <a class="btn btn-primary" href="cv-mauro-pinto.pdf" download="Mauro_Pinto_CV.pdf">Descargar CV</a>
-      <a href="https://facebook.com/tuusuario" target="_blank" class="slider-item"><i class="fab fa-facebook"></i>
-        Facebook</a>
-      <a href="https://instagram.com/tuusuario" target="_blank" class="slider-item"><i class="fab fa-instagram"></i>
-        Instagram</a>
-      <a href="https://twitter.com/tuusuario" target="_blank" class="slider-item"><i class="fab fa-twitter"></i>
-        Twitter</a>
-      <a href="https://tiktok.com/@tuusuario" target="_blank" class="slider-item"><i class="fab fa-tiktok"></i>
-        TikTok</a>
-    </div>
+ <!-- Slider -->
+<div id="slider">
+  <div class="foto-perfil">
+    <img src="./img/foto de perfil mauro Pinto.jpg" alt="Foto de Mauro Pinto" class="foto-circular">
+  </div>
+  <a href="#inicio" class="slider-item"><i class="fas fa-home"></i> Inicio</a>
+  <a href="#sobre-mi" class="slider-item"><i class="fas fa-user"></i> Sobre Mí</a>
+  <a href="#proyectos" class="slider-item"><i class="fas fa-briefcase"></i> Proyectos</a>
+  <a href="#contacto" class="slider-item"><i class="fas fa-envelope"></i> Contacto</a>
+  <a href="https://github.com/tuusuario" target="_blank" class="slider-item"><i class="fab fa-github"></i> GitHub</a>
+  <a href="https://www.linkedin.com/in/mauroalexanderpinto/" target="_blank" class="slider-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
+  <a class="btn btn-primary" href="cv-mauro-pinto.pdf" download="Mauro_Pinto_CV.pdf">Descargar CV</a>
+  <a href="https://facebook.com/tuusuario" target="_blank" class="slider-item"><i class="fab fa-facebook"></i> Facebook</a>
+  <a href="https://instagram.com/tuusuario" target="_blank" class="slider-item"><i class="fab fa-instagram"></i> Instagram</a>
+  <a href="https://twitter.com/tuusuario" target="_blank" class="slider-item"><i class="fab fa-twitter"></i> Twitter</a>
+  <a href="https://tiktok.com/@tuusuario" target="_blank" class="slider-item"><i class="fab fa-tiktok"></i> TikTok</a>
+</div>
+
 
 
     <!-- Header -->
@@ -70,168 +65,154 @@
         <i class="react-symbol fab fa-react"></i>
       </div>
     </header>
-<section class="fondo">
-    <section id="sobre-mi">
-     <div class="container">
-        <h1 class="titulo">Sobre mí</h1>
-        <div class="contenido">
-          <img src="./img/foto de perfil mauro Pinto.jpg" alt="Foto de Mauro Alexander Pinto" class="foto-perfil">
-          <div class="descripcion">
-            <h2>Mauro Alexander Pinto</h2>
-            <p>
-              Soy desarrollador web apasionado por crear soluciones innovadoras y funcionales. Mi formación en
-              Comunicación Audiovisual y Desarrollo Web me permite combinar creatividad y tecnología para diseñar
-              productos digitales atractivos y eficaces.
-            </p>
-            <p>
-              Me especializo en tecnologías como <strong style="color: yellow;">JavaScript</strong>, <strong
-                style="color: green;">React</strong>, <strong style="color: orange;">HTML</strong><strong
-                style="color: #0909ff;">CSS</strong> y más. Siempre estoy en busca de nuevos retos que me permitan
-              crecer
-              y mejorar constantemente.
-            </p>
+<body>
+  
+  
+  <section id="sobre-mi" class="sobre-mi">
+    <div class="contenedor-sobre-mi">
+      <img src="./img/foto de perfil mauro Pinto.jpg" alt="Tu Foto" class="foto-sobre-mi">
+      <div class="texto-sobre-mi">
+        <h2 class="titulo-sobre-mi">Sobre mí</h2>
+        <p class="intro-sobre-mi">Soy Mauro Pinto, un apasionado desarrollador web con una formación en Comunicación Audiovisual. Mi misión es transformar ideas en soluciones digitales a través de la programación, creando experiencias únicas y efectivas.</p>
+        
+        <h3>Mi pasión por la programación</h3>
+        <p>La programación no solo es un trabajo, sino una forma de vida. Disfruto del proceso creativo de construir desde cero aplicaciones web interactivas. Mi enfoque está en la mejora continua y la adaptación a nuevas tecnologías, lo que me permite entregar soluciones innovadoras.</p>
+        
+        <div class="habilidades">
+          <div class="habilidad html">
+            <i class="fab fa-html5"></i>
+            <h4>HTML</h4>
+            <p>Lenguaje de marcado para la web.</p>
+          </div>
+          <div class="habilidad css">
+            <i class="fab fa-css3-alt"></i>
+            <h4>CSS</h4>
+            <p>Estiliza sitios web con diseño atractivo.</p>
+          </div>
+          <div class="habilidad js">
+            <i class="fab fa-js"></i>
+            <h4>JavaScript</h4>
+            <p>Lenguaje de programación para interactividad.</p>
+          </div>
+          <div class="habilidad react">
+            <i class="fab fa-react"></i>
+            <h4>React</h4>
+            <p>Biblioteca de JavaScript para interfaces.</p>
           </div>
         </div>
-      </div>
+        </section>
+        
+
+        <section id="proyectos">
+        <section class="cards-section">
+          <h2 class="section-title">Mis Proyectos</h2>
+          <div class="container d-flex justify-content-end">
+              <div class="cards-wrapper">
+                  <!-- Card 1: Trabajo HTML, CSS y Bootstrap -->
+                  <div class="card">
+                      <div class="card-icon">
+                          <i class="fa-brands fa-html5"></i>
+                          <i class="fa-brands fa-css3-alt"></i>
+                          <i class="fa-brands fa-bootstrap"></i>
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">HTML, CSS y Bootstrap</h5>
+                          <p class="card-text">Diseños responsivos con Bootstrap.</p>
+                          <a href="https://github.com/tuusuario/proyecto1" class="btn btn-primary">Ver en GitHub</a>
+                      </div>
+                  </div>
+      
+                  <!-- Card 2: JavaScript -->
+                  <div class="card">
+                      <div class="card-icon">
+                          <i class="fa-brands fa-square-js"></i>
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">JavaScript</h5>
+                          <p class="card-text">Proyectos interactivos con JS.</p>
+                          <a href="https://github.com/tuusuario/proyecto2" class="btn btn-primary">Ver en GitHub</a>
+                      </div>
+                  </div>
+      
+                  <!-- Card 3: React -->
+                  <div class="card">
+                      <div class="card-icon">
+                          <i class="fa-brands fa-react"></i>
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">React</h5>
+                          <p class="card-text">Aplicaciones dinámicas en React.</p>
+                          <a href="https://github.com/tuusuario/proyecto3" class="btn btn-primary">Ver en GitHub</a>
+                      </div>
+                  </div>
+      
+                  <!-- Card 4: APIs -->
+                  <div class="card">
+                      <div class="card-icon">
+                          <i class="fa-solid fa-database"></i>
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">APIs</h5>
+                          <p class="card-text">Integración con APIs dinámicas.</p>
+                          <a href="https://github.com/tuusuario/proyecto4" class="btn btn-primary">Ver en GitHub</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+    </section>
+        
+
+    <section id="contacto">
+      <section class="formulario-seccion">
+        <h2 class="titulo-formulario">Contáctame</h2>
+        <form id="contacto-form">
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu nombre">
+            </div>
+            <div class="campo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Tu email">
+            </div>
+            <div class="campo">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" placeholder="Tu mensaje"></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
     </section>
   </section>
-    <!-- Sección de servicios -->
-    <section id="servicios">
-      <section class="services-section">
-        <div class="container">
-          <h2 class="section-title">Mis Servicios</h2>
-          <div class="services-container">
-            <!-- Tarjeta de servicio 1 -->
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="bi bi-code-slash"></i>
-              </div>
-              <h3 class="service-title">Desarrollo Web</h3>
-              <p class="service-description">
-                Ofrezco desarrollo web utilizando las últimas tecnologías como HTML, CSS, JavaScript, y frameworks como
-                React.
-              </p>
-            </div>
-            <!-- Tarjeta de servicio 2 -->
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="bi bi-paint-bucket"></i>
-              </div>
-              <h3 class="service-title">Diseño Gráfico</h3>
-              <p class="service-description">
-                Diseño interfaces atractivas y funcionales que se adaptan a las necesidades de los usuarios.
-              </p>
-            </div>
-            <!-- Tarjeta de servicio 3 -->
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="bi bi-camera"></i>
-              </div>
-              <h3 class="service-title">Fotografía</h3>
-              <p class="service-description">
-                Ofrezco fotografía profesional para proyectos digitales, eventos y más.
-              </p>
-            </div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5491123456789" target="_blank" class="whatsapp-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+
+        
+        
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-logo">
+             
           </div>
-        </div>
-      </section>
-    </section>
-
-    <!-- Sección Mis Proyectos -->
-    <section id="proyectos">
-      <section class="projects-section">
-        <div class="container">
-          <h2 class="section-title">Mis Proyectos</h2>
-          <div class="projects-container" id="projects-container">
-            <!-- Las tarjetas se cargarán dinámicamente con JavaScript -->
+          <div class="footer-links">
+              <a href="#inicio">Inicio</a>
+              <a href="#sobre-mi">Sobre Mí</a>
+              <a href="#proyectos">Proyectos</a>
+              <a href="#contacto">Contacto</a>
           </div>
-        </div>
-      </section>
-    </section>
-
-    <!-- testimoniales -->
-    <section id="testimoniales">
-      <section class="testimonials-section">
-        <div class="container">
-          <h2 class="section-title">Testimonios</h2>
-          <div class="testimonials-container">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-card">
-              <p class="testimonial-text">"Mauro es un excelente desarrollador, su trabajo en nuestro proyecto fue
-                fundamental."</p>
-              <p class="testimonial-author">Juan Pérez - CEO</p>
-            </div>
-            <!-- Testimonial 2 -->
-            <div class="testimonial-card">
-              <p class="testimonial-text">"Gracias a su creatividad, el diseño de nuestra web superó todas nuestras
-                expectativas."</p>
-              <p class="testimonial-author">Ana Gómez - Directora Creativa</p>
-            </div>
-            <!-- Testimonial 3 -->
-            <div class="testimonial-card">
-              <p class="testimonial-text">"Gran profesional, siempre entregando soluciones rápidas y eficaces."</p>
-              <p class="testimonial-author">Carlos Ruiz - Gerente de IT</p>
-            </div>
-            <!-- Testimonial 4 -->
-            <div class="testimonial-card">
-              <p class="testimonial-text">"Mauro logra transformar ideas complejas en productos fáciles de usar. Muy
-                recomendable."</p>
-              <p class="testimonial-author">Laura Martínez - Fundadora</p>
-            </div>
-            <!-- Testimonial 5 -->
-            <div class="testimonial-card">
-              <p class="testimonial-text">"Trabajo excepcional, siempre con una actitud positiva y con mucho enfoque en
-                el detalle."</p>
-              <p class="testimonial-author">Miguel Sánchez - CTO</p>
-            </div>
-            <!-- Testimonial 6 -->
-            <div class="testimonial-card">
-              <p class="testimonial-text">"Ha sido un placer trabajar con Mauro, una persona comprometida con el éxito
-                del proyecto."</p>
-              <p class="testimonial-author">Elena Díaz - Marketing Manager</p>
-            </div>
+          <div class="footer-social">
+              <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
           </div>
-        </div>
-      </section>
-
-      <!-- Contacto -->
-      <section id="contacto">
-        <section class="contact-section">
-          <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <form id="contact-form" class="contact-form">
-              <div class="form-group">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
-              </div>
-              <div class="form-group">
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required placeholder="Ingresa tu correo">
-              </div>
-              <div class="form-group">
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje"></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Enviar</button>
-            </form>
-            
-          </div>
-        </section>
-      </section>
-
-
-
-
-      <!-- Footer -->
-      <footer class="text-center bg-dark text-white py-3">
-        <p>&copy; 2025 Mauro Pinto. Todos los derechos reservados.</p>
-        <a href="hhttps://github.com/produccion2018" target="_blank" class="text-white me-2"><i class="fab fa-github"></i>
-          GitHub</a>
-        <a href="https://www.linkedin.com/in/mauroalexanderpinto/" target="_blank" class="text-white"><i class="fab fa-linkedin"></i>
-          LinkedIn</a>
-      </footer>
-
-
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2025 Mauro Pinto. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+  
 
       <!-- Bootstrap JS -->
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -244,8 +225,8 @@
 
       <!-- Scripts -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="./js/app.js"></script>
-      <script src="./js/testimoniales.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+       <script src="./js/app.js"></script>
   </body>
 
   </html>

@@ -21,33 +21,43 @@ document.querySelectorAll(".nav-link").forEach(item => {
   
 
 
-// Datos de los proyectos con imágenes específicas
-const projects = [
-  { id: 1, img: "proyecto1", link: "https://github.com/tuusuario/proyecto1" },
-  { id: 2, img: "img/proyecto2.jpg", link: "https://github.com/tuusuario/proyecto2" },
-  { id: 3, img: "img/proyecto3.jpg", link: "https://github.com/tuusuario/proyecto3" },
-  { id: 4, img: "img/proyecto4.jpg", link: "https://github.com/tuusuario/proyecto4" },
-  { id: 5, img: "img/proyecto5.jpg", link: "https://github.com/tuusuario/proyecto5" }
-];
+document.getElementById("contacto-form").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-// Seleccionar el contenedor donde se mostrarán los proyectos
-const projectsContainer = document.getElementById("projects-container");
+  let nombre = document.getElementById("nombre").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let mensaje = document.getElementById("mensaje").value.trim();
 
-// Generar dinámicamente las tarjetas de proyectos
-projects.forEach(project => {
-  const projectCard = document.createElement("div");
-  projectCard.classList.add("project-card");
+  if (nombre === "" || email === "" || mensaje === "") {
+      Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Todos los campos son obligatorios",
+      });
+      return;
+  }
 
-  const projectLink = document.createElement("a");
-  projectLink.href = project.link;
-  projectLink.target = "_blank";
+  if (!validarEmail(email)) {
+      Swal.fire({
+          icon: "error",
+          title: "Correo inválido",
+          text: "Por favor ingresa un email válido",
+      });
+      return;
+  }
 
-  const projectImg = document.createElement("img");
-  projectImg.src = project.img;
-  projectImg.alt = `Proyecto ${project.id}`;
+  Swal.fire({
+      icon: "success",
+      title: "¡Mensaje enviado!",
+      text: "Me pondré en contacto contigo pronto.",
+  });
 
-  projectLink.appendChild(projectImg);
-  projectCard.appendChild(projectLink);
-  projectsContainer.appendChild(projectCard);
+  // Limpiar el formulario
+  document.getElementById("contacto-form").reset();
 });
 
+// Función para validar email
+function validarEmail(email) {
+  let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
